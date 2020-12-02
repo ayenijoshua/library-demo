@@ -1,3 +1,28 @@
+default: &default
+   adapter: postgresql
+   encoding: unicode
+  
+development:
+   adapter: postgresql
+   encoding: unicode
+   database: <%= ENV['POSTRES_DEVELOPMENT_DB'] %>
+   username: <%= ENV['POSTRES_USER'] %>
+   password: <%= ENV['POSTRES_PASWORD'] %>
+
+test:
+   adapter: postgresql
+   encoding: unicode
+   database: <%= ENV['POSTRES_TEST_DB'] %>
+   username: <%= ENV['POSTRES_USER'] %>
+   password: <%= ENV['POSTRES_PASWORD'] %>
+ 
+production:
+   adapter: postgresql
+   encoding: unicode
+   database: <%= ENV['POSTRES_PRODUCTION_DB'] %>
+   username: <%= ENV['POSTRES_USER'] %>
+   password: <%= ENV['POSTRES_PASWORD'] %>
+
 # # SQLite. Versions 3.8.0 and up are supported.
 # #   gem install sqlite3
 # #
@@ -23,3 +48,4 @@
 # production:
 #   <<: *default
 #   database: db/production.sqlite3
+
