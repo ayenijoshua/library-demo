@@ -5,7 +5,6 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.column :price, :float
       t.column :subject_id, :integer
       t.column :description, :text
-      t.column :created_at, :timestamp
       t.timestamps
     end
   end
